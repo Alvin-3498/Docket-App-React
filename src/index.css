@@ -1,13 +1,972 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /* common styles */
+
+    .main-body {
+        @apply w-[100%] h-[400vh]
+    }
+    .main-body2 {
+        @apply w-[100%] h-[200vh]
+    }
+    .footer{
+        @apply w-[100%] h-[250px] bg-black flex
+    }
+    .left-footer{
+        @apply w-[50%] h-[100%]
+    }
+    .right-footer{
+        @apply w-[50%] h-[100%]
+    }
+    .para5{
+        @apply font-medium text-xl text-white mx-6 py-6
+    }
+    .hd7{
+        @apply font-medium text-xl text-white mx-6 py-6
+    }
+
+
+    /* home page */
+
+    .hero-video1 {
+        @apply w-[100%] h-[780px] relative
+    }
+
+    .hero-video1::before {
+        @apply content-[''] absolute inset-0
+    }
+
+    .videoclip1 {
+        @apply w-[100%] h-[100%] object-cover z-0
+    }
+
+    .header {
+        @apply absolute top-0 w-[100%] h-[100px] flex
+    }
+
+    .left-header {
+        @apply w-[20%] h-[100%] flex
+    }
+
+    .middle-header {
+        @apply w-[60%] h-[100%] flex 
+    }
+
+    .right-header {
+        @apply w-[20%] h-[100%] flex -my-3
+    }
+
+    .hd1 {
+        @apply font-semibold text-[35px] text-white my-2
+    }
+
+    .pic1 {
+        @apply w-[50px] h-[50px] mx-2 my-3
+    }
+
+    .linksgrp {
+        @apply text-white flex font-medium text-xl gap-14 my-6 px-[250px]
+    }
+
+    .link {
+        @apply relative duration-300
+    }
+
+    .link:before {
+        @apply content-[''] absolute bg-white w-[100%] h-[4px] bottom-2 rounded-lg duration-300 opacity-0
+    }
+
+    .link:hover:before,.link:focus:before {
+        @apply -translate-y-[10px] opacity-100
+    }
+
+    .link:hover,.link:focus {
+        @apply -translate-y-[9px] text-white
+    }
+
+    .btn1 {
+        @apply text-white my-7 font-semibold text-xl bg-transparent border-2 px-4 py-1 rounded-lg mx-7 duration-300 
+    }
+
+    .btn1:hover {
+        @apply text-black bg-white shadow-xl shadow-white/30
+    }
+
+    .para1 {
+        @apply absolute top-[250px] text-white mx-[300px] duration-300 opacity-0
+    }
+
+    .para1 {
+        @apply -translate-x-[10px] opacity-100
+    }
+
+    .hd2 {
+        @apply relative font-medium text-[40px]
+    }
+
+    .hd3 {
+        @apply relative font-semibold text-[70px] 
+    }
+    .content1{
+        @apply w-[100%] h-[700px] bg-gray-400 py-10
+    }
+    .ctr1{
+        @apply w-[90%] h-[600px] bg-white rounded-2xl mx-16 flex shadow-lg shadow-white/30
+    }
+    .ctr1-left{
+        @apply w-[50%] h-[100%] px-[100px] py-8
+    }
+    .ctr1-right{
+        @apply w-[50%] h-[100%] py-5 mx-10
+    }
+    .hd4{
+        @apply font-semibold text-5xl opacity-0
+    }
+    .para2{
+        @apply font-medium text-2xl leading-10 opacity-0
+    }
+    .pic2{
+        @apply w-[400px] h-[550px] mx-[190px] rounded-2xl opacity-0
+    }
+    .content2{
+        @apply w-[100%] h-[700px] bg-white/30 py-10
+    }
+    .ctr2{
+        @apply w-[90%] h-[600px] bg-black rounded-2xl mx-16 flex shadow-lg shadow-black/30
+    }
+    .ctr2-left{
+        @apply w-[40%] h-[100%] px-[100px] py-8
+    }
+    .ctr2-right{
+        @apply w-[60%] h-[100%] py-5 
+    }
+    .hd5{
+        @apply font-semibold text-4xl text-white py-2 opacity-0
+    }
+    .para3{
+        @apply font-medium text-2xl  text-white py-12 opacity-0
+    }
+    .points{
+        @apply py-9
+    }
+    .pic3{
+        @apply w-[450px] h-[530px] rounded-2xl
+    }
+    .content3{
+        @apply w-[100%] h-[700px] bg-gray-400 py-10
+    }
+    .ctr3{
+        @apply w-[90%] h-[600px] bg-white rounded-2xl mx-16 flex shadow-lg shadow-white/30
+    }
+    .ctr3-left{
+        @apply w-[50%] h-[100%] px-[100px] py-8
+    }
+    .ctr3-right{
+        @apply w-[50%] h-[100%] py-5 mx-10
+    }
+    .hd6{
+        @apply font-semibold text-4xl my-12
+    }
+    .para4{
+        @apply font-medium text-2xl leading-10 py-5 leading-loose
+    }
+    .pic4{
+        @apply w-[500px] h-[500px] mx-5 rounded-2xl
+    }
+    .points{
+        @apply font-medium text-xl leading-snug
+    }
+    
+
+    /* about page */
+
+    .hd8{
+        @apply relative font-semibold text-[70px] mx-[350px]
+    }
+    .content4{
+        @apply w-[100%] h-[700px] bg-gray-400 py-10
+    }
+    .ctr4{
+        @apply w-[90%] h-[600px] bg-white rounded-2xl mx-16 shadow-lg shadow-black/30
+    }
+    .hd9{
+        @apply font-semibold text-4xl text-black text-center py-[30px]
+    }
+    .subhd{
+        @apply font-semibold text-3xl text-black mx-10
+    }
+    
+    .para6{
+        @apply font-medium text-2xl text-black mx-10 py-5
+    }
+    .content5{
+        @apply w-[100%] h-[700px] bg-white/30 py-10
+    }
+    .ctr5{
+        @apply w-[90%] h-[600px] bg-black rounded-2xl mx-16 shadow-lg shadow-white/30
+    }
+    .hd10{
+        @apply font-semibold text-4xl text-white text-center py-[30px]
+    }
+    .subhd1{
+        @apply font-semibold text-3xl text-white mx-10
+    }
+    .para7{
+        @apply font-medium text-2xl text-white mx-10 py-5
+    }
+    .content6{
+        @apply w-[100%] h-[700px] bg-white/30 py-10
+    }
+    .ctr6{
+        @apply w-[90%] h-[600px] bg-black backdrop-blur-md rounded-2xl mx-16 shadow-lg shadow-black/30
+    }
+    .hd11{
+        @apply font-semibold text-4xl text-white py-[30px] text-center
+    }
+    .para8{
+        @apply font-medium text-2xl text-white mx-10 py-5 leading-loose
+    }
+
+
+    /* contactus page */
+
+    .main-body2 {
+        @apply w-[100%] h-[300vh]
+    }
+    .hd12{
+        @apply font-semibold text-[70px] mx-[280px]
+    }
+    .content7{
+        @apply w-[100%] h-[1650px] bg-white/30 py-10
+    }
+    .ctr7{
+        @apply w-[90%] h-[600px] bg-black rounded-2xl mx-16 shadow-lg shadow-black/50
+    }
+    .para9{
+        @apply font-medium text-3xl text-white px-9 text-center py-[150px]
+    }
+    .hd13{
+        @apply font-medium text-[50px] text-white text-center py-[-20px]
+    }
+    .form1-container{
+        @apply w-[90%] h-[850px] bg-black mx-16 my-16 rounded-2xl flex-col px-[310px] py-8 shadow-lg shadow-black/50
+    }
+    .form{
+        @apply py-10
+    }
+    .form-text{
+        @apply font-medium text-xl text-white leading-10
+    }
+    .field1{
+        @apply w-[750px] h-[40px] rounded-md transition-all duration-300 hover:ring-4 ring-indigo-500 focus:ring-4 outline-none
+    } 
+    .field2{
+        @apply rounded-md outline-none hover:ring-4 ring-indigo-500 focus:ring-4 transition-all duration-300
+    }
+    .form-hd1{
+        @apply font-medium text-3xl text-center text-white
+    }
+    .line1{
+        @apply border-white w-[100%]
+    }
+    .btn2{
+        @apply bg-indigo-600 px-14 py-3 mx-[285px] my-[40px] rounded-xl font-medium text-xl text-white hover:bg-green-500 hover:text-black hover:ring-4 hover:ring-green-300 duration-300 transition-all hover:-translate-y-3
+    }
+
+    /* More page */
+
+    .hd14{
+        @apply font-semibold text-[70px] mx-[370px]
+    }
+    .content8{
+        @apply w-[100%] h-[1300px] bg-gray-400
+    }
+    .demo-set1{
+        @apply flex py-12
+    }
+    .demo-set2{
+        @apply flex
+    }
+    .demopic{
+        @apply w-[100%] h-[100%] rounded-xl
+    }
+    .demoimages{
+        @apply p-10 w-[500px] h-[600px] opacity-0
+    }
+
+    /* Login page */
+
+    .login-container{
+        @apply w-[100%] h-[790px] relative
+    }
+    .loginpic{
+        @apply w-[100%] h-[100%]
+    }
+    .login-form1{
+        @apply w-[450px] h-[530px] bg-gray-200 absolute top-[-100px] mx-[550px] my-[200px] rounded-xl shadow-lg shadow-black/60
+    }
+    .loginhd1{
+        @apply font-bold text-5xl px-[160px] py-[20px]
+    }
+    .line2{
+        @apply border-black w-[90%] mx-6
+    }
+    .login{
+        @apply px-8 py-8
+    }
+    .labels{
+        @apply font-semibold text-xl
+    }
+    .fields{
+        @apply w-[380px] h-[40px] rounded-md transition-all duration-300 hover:ring-2 ring-indigo-500 focus:ring-2 outline-none px-3
+    }
+    .loginbtn{
+        @apply bg-black text-white px-8 py-4 mx-[135px] my-[60px] rounded-xl font-semibold text-xl hover:bg-green-600 hover:text-black transition-all duration-300 ring-4 ring-black hover:ring-4 hover:ring-green-300  hover:-translate-y-3
+    }
+    .register-div{
+        @apply flex gap-2 mx-24 -my-10
+    }
+    .regtext{
+        @apply text-blue-500 font-medium text-xl -my-1 hover:underline
+    }
+    .accounttext{
+        @apply font-medium 
+    }
+
+    /* Registration Page */
+
+    .reg-container{
+        @apply w-[100%] h-[780px] relative
+    }
+    .regimage{
+        @apply w-[100%] h-[100%]
+    }
+    .regform{
+        @apply w-[500px] h-[750px] bg-gray-200 absolute top-0 left-[34%] my-[15px] rounded-2xl flex-col shadow-lg shadow-black/60
+    }
+    .reghd1{
+        @apply font-bold text-5xl px-28 py-5
+    }
+    .line3{
+        @apply w-[95%] border-black mx-3
+    }
+    .genderradio{
+        @apply flex gap-1
+    }
+    .gender-div{
+        @apply flex gap-6
+    }
+    .formcontrol{
+        @apply px-10 py-4
+    }
+    .reglabel{
+        @apply font-semibold text-xl
+    }
+    .regfield{
+        @apply w-[420px] h-[40px] rounded-md outline-none transition-all duration-300 hover:ring-2 ring-indigo-500 focus:ring-2 px-3
+    }
+    .gendername{
+        @apply font-semibold
+    }
+    .LAFC{
+        @apply my-3
+    }
+    .regbtn{
+        @apply font-semibold text-xl bg-black text-white px-16 py-4 rounded-xl mx-28 my-5 transition-all duration-300 hover:-translate-y-3 hover:bg-green-600 hover:text-black hover:ring-4 hover:ring-green-300 
+    }
+    .round{
+        @apply w-[25px] h-[25px]
+    }
+    
+    /* User Page */
+
+    .user-main{
+        @apply bg-gray-200 w-[100%] h-[780px] py-4
+    }
+    .hctr1{
+        @apply w-[1170px] h-[80px] bg-white mx-[330px] rounded-xl flex
+    }
+    .hctr1-left{
+        @apply w-[90%] h-[100%] flex
+    }
+    .hctr1-right{
+        @apply w-[30%] h-[100%]
+    }
+    .vctr{
+        @apply flex 
+    }
+    .vctr1{
+        @apply w-[300px] h-[745px] bg-black mx-4 -my-20 rounded-xl
+    }
+    .vctr2{
+        @apply w-[1170px] h-[654px] bg-white my-3 rounded-xl 
+    }
+    .scroll{
+        @apply overflow-y-auto w-[1168px] h-[572px]
+    }
+    .user-hd1{
+        @apply font-semibold text-3xl text-white p-6 px-10 
+    } 
+    .userlinks-div{
+        @apply p-6 flex flex-col my-[20px] leading-10 mx-0
+    }
+    .user-link{
+        @apply text-white flex font-semibold text-xl relative z-20 px-5 transform -my-3
+    }
+    .user-link:hover{
+        @apply text-black transition-all translate-x-9 duration-500 
+    }
+    .user-link::before{
+        @apply content-[''] bg-white w-[210px] h-[50px] absolute rounded-md -z-10 -left-2 -top-2 transition-all opacity-0
+    }
+    .user-link::before:hover{
+        @apply transition-all translate-x-2 duration-500 
+    }
+    .user-link:hover:before{
+        @apply duration-500 opacity-100
+    }
+    .user-line1{
+        @apply w-[90%] mx-4
+    }
+    .user-text{
+        @apply font-bold text-4xl text-black mx-8 py-4
+    }
+    .searchtext{
+        @apply mx-56 my-5 p-2 w-[320px] h-[40px] rounded-3xl border
+    }
+    .searchicon{
+        @apply w-[30px] h-[30px] -mx-52 my-6 cursor-pointer
+    }
+    .contacticon{
+        @apply w-[45px] h-[45px] mx-[270px] my-3 ring-2 ring-black rounded-full cursor-pointer
+    }
+    .userlinks-div2{
+        @apply px-6 py-16 -my-28
+    }
+
+    /* UploadDocument Page */
+
+    .upload-hd1{
+        @apply font-medium text-2xl px-6 py-2
+    }
+    .uploadline1{
+        @apply w-[97%] mx-4 
+    }
+    .upload-form{
+        @apply p-8
+    }
+    .upload-label{
+        @apply font-medium text-xl
+    }
+    .upload-field{
+        @apply border border-gray-400 w-[770px] h-[40px] rounded-md outline-none px-2 py-1
+    }
+    .upload-field:hover{
+        @apply ring-2 ring-blue-500 transition-all duration-300
+    }
+    .upload-desc{
+        @apply border border-gray-400 rounded-md outline-none px-2
+    }
+    .upload-desc:hover{
+        @apply ring-2 ring-blue-500 transition-all duration-300
+    }
+    .userbtn1{
+        @apply font-semibold text-xl bg-black text-white px-16 py-4 rounded-xl mx-72 my-1 transition-all duration-300 hover:-translate-y-3 hover:bg-green-600 hover:text-black hover:ring-4 hover:ring-green-300 
+    }
+
+    /* CaseFiles Page */
+
+    .files-hd1{
+        @apply font-semibold text-3xl m-5
+    }
+    .file-view{
+        @apply m-5 border px-5 border-gray-400 rounded-lg py-3
+    }
+    .viewfile-name{
+        @apply font-bold text-xl
+    }
+    .viewfile-desc{
+        @apply font-bold 
+    }
+    .desc-para{
+        @apply font-medium
+    }
+    .name-hd1{
+        @apply font-medium
+    }
+
+    /* admin page */
+
+    .admin-main{
+        @apply bg-gradient-to-r from-violet-500 to-fuchsia-500 w-[100%] h-[842px] py-4
+    }
+    .admin-hd1{
+        @apply font-semibold text-3xl px-6 py-6 text-white
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities{
+
+    /* home page */
+
+    .text1{
+        animation: text1 2s forwards
+    }
+
+    @keyframes text1 {
+        0% {
+            transform: translateX(-90px); 
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translateX(0); 
+            opacity: 1;
+        }
+    }
+
+    .text2{
+        animation: text2 3s forwards
+    }
+    
+    @keyframes text2 {
+        0% {
+            transform: translateX(-90px); 
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translateX(0); 
+            opacity: 1;
+        }
+    }
+    
+    .paraanimate1{
+        animation: paraanimate1 3s forwards;
+        animation-timeline: view();
+    }
+
+    @keyframes paraanimate1 {
+        0% {
+            animation-delay: 3s;
+            transform: translateX(-80px);
+            opacity: 0;
+        }
+
+        100% {
+            animation-delay: 3s;
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .card1 {
+        animation: card1 3s forwards;
+        animation-timeline: view();
+    }
+
+    @keyframes card1 {
+        0% {
+            animation-delay: 3s;
+            transform: translateX(80px);
+            opacity: 0;
+        }
+
+        100% {
+            animation-delay: 3s;
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .paraanimate2{
+        animation: paraanimate2 3s forwards;
+        animation-timeline: view();
+    }
+
+    @keyframes paraanimate2 {
+        0% {
+            animation-delay: 3s;
+            transform: translateY(80px);
+            opacity: 0;
+        }
+
+        100% {
+            animation-delay: 3s;
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .card2 {
+        animation: card2 3s forwards;
+        animation-timeline: view();
+    }
+
+    @keyframes card2 {
+        0% {
+            animation-delay: 3s;
+            transform: translateY(-80px);
+            opacity: 0;
+        }
+
+        100% {
+            animation-delay: 3s;
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+
+    .paraanimate3{
+        animation: paraanimate3 3s forwards;
+        animation-timeline: view();
+    }
+
+    @keyframes paraanimate3 {
+        0% {
+            animation-delay: 3s;
+            transform: translateY(-80px);
+            opacity: 0;
+        }
+
+        100% {
+            animation-delay: 3s;
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .card3 {
+        animation: card3 3s forwards;
+        animation-timeline: view();
+    }
+
+    @keyframes card3 {
+        0% {
+            animation-delay: 3s;
+            transform: translateX(80px);
+            opacity: 0;
+        }
+
+        100% {
+            animation-delay: 3s;
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /* about page */
+
+    .text3{
+        animation: text3 3s forwards;
+    }
+    
+    @keyframes text2 {
+        0% {
+            animation-delay: 3s;
+            transform: translateX(-130px); 
+            opacity: 0;
+        }
+    
+        100% {
+            animation-delay: 3s;
+            transform: translateX(0); 
+            opacity: 1;
+        }
+    } 
+    
+    
+
+    .text4{
+        animation: text4 2s forwards;
+        animation-timeline: view();
+    }
+
+    @keyframes text4 {
+        0% {
+            animation-delay: 3s;
+            transform: translateX(-40px); 
+            opacity: 0;
+        }
+    
+        100% {
+            animation-delay: 3s;
+            transform: translateX(0); 
+            opacity: 1;
+        }
+    }
+
+    .paraanimate4{
+        animation: paraanimate4 3s forwards;
+        animation-timeline: view();
+    }
+    
+    @keyframes paraanimate4 {
+        0% {
+            animation-delay: 3s;
+            transform: translateX(-40px); 
+            opacity: 0;
+        }
+    
+        100% {
+            animation-delay: 3s;
+            transform: translateX(0); 
+            opacity: 1;
+        }
+    }
+
+
+    .text5{
+        animation: text5 2s forwards;
+        animation-timeline: view();
+    }
+
+    @keyframes text5 {
+        0% {
+            animation-delay: 3s;
+            transform: translateX(60px); 
+            opacity: 0;
+        }
+    
+        100% {
+            animation-delay: 3s;
+            transform: translateX(0); 
+            opacity: 1;
+        }
+    }
+
+    .paraanimate5{
+        animation: paraanimate5 3s forwards;
+        animation-timeline: view();
+    }
+    
+    @keyframes paraanimate5 {
+        0% {
+            animation-delay: 3s;
+            transform: translateX(60px); 
+            opacity: 0;
+        }
+    
+        100% {
+            animation-delay: 3s;
+            transform: translateX(0); 
+            opacity: 1;
+        }
+    }
+
+    /* contactus page */
+
+    .text6{
+        animation-name: text6;
+        animation-timeline: view();
+    }
+
+    @keyframes text6 {
+        0%{
+            animation-delay: 3s;
+            transform:translateY(-90px);
+            opacity:0;
+        }
+
+        100%{
+            animation-delay: 3s;
+            transform:translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .paraanimate6{
+        animation-name: paraanimate6;
+        animation-timeline: view();
+    }
+
+    @keyframes paraanimate6 {
+        0%{
+            animation-delay: 3s;
+            transform: translateY(-90px);
+            opacity: 0;
+        }
+
+        100%{
+            animation-delay: 3s;
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* login page */
+
+    .animate1{
+        animation-name: animate1;
+        animation-duration: 1s;
+    }
+    @keyframes animate1 {
+        0%{
+            transform: translateY(-90px);
+            opacity: 0;
+        }
+
+        50%{
+            transform: translateY(50px);
+            opacity: 1;
+        }
+
+        100%{
+            transform:translateY(0);
+            opacity: 1;
+        }
+        
+    }
+    
+    .demofile1{
+        animation-name: demofile1;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes demofile1 {
+        0%{
+            transform: translateY(-60px);
+            opacity: 0;
+        }
+
+        50%{
+            transform: translateY(40px);
+        }
+
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    .demofile2{
+        animation-name: demofile2;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+    }
+    @keyframes demofile2 {
+        0%{
+            transform: translateY(-60px);
+            opacity: 0;
+        }
+
+        50%{
+            transform: translateY(40px);
+        }
+
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    .demofile3{
+        animation-name: demofile3;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+    }
+    @keyframes demofile3 {
+        0%{
+            transform: translateY(-60px);
+            opacity: 0;
+        }
+
+        50%{
+            transform: translateY(40px);
+        }
+
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    .demofile4{
+        animation-name: demofile4;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 6s;
+    }
+    @keyframes demofile4 {
+        0%{
+            transform: translateY(-60px);
+            opacity: 0;
+        }
+
+        50%{
+            transform: translateY(40px);
+        }
+
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    .demofile5{
+        animation-name: demofile5;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 8s;
+    }
+    @keyframes demofile5 {
+        0%{
+            transform: translateY(-60px);
+            opacity: 0;
+        }
+
+        50%{
+            transform: translateY(40px);
+        }
+
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    .demofile6{
+        animation-name: demofile6;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 10s;
+    }
+    @keyframes demofile6 {
+        0%{
+            transform: translateY(-60px);
+            opacity: 0;
+        }
+
+        50%{
+            transform: translateY(40px);
+        }
+
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    .user-div{
+        animation-name: user-div;
+        animation-duration: 2s;
+    }
+    @keyframes user-div {
+        0%{
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
 }
+
+
